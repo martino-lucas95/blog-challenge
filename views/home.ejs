@@ -1,0 +1,10 @@
+<%- include("Partials/header") -%>
+
+<div class="container-fluid">
+    <%   posts.forEach(post => {%>
+        <h2><%= post.title %></h2>
+        <p class="text-truncate"><%= post.body.substring(0, 100) + "... " %><a href="/posts/<%= post.title %>">Read More</a></p>
+    <%});%>
+</div>
+
+<%- include("Partials/footer") -%>
