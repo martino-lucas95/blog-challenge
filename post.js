@@ -1,7 +1,7 @@
 exports.getPost = function() {
     const post = {
-        Title: req.body.newPostTitle,
-        Body: req.body.newPostBody
+        title: req.body.postTitle,
+        content: req.body.postBody
     };
 
     return post;
