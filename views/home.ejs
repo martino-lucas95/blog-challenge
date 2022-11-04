@@ -1,12 +1,14 @@
 <%- include("Partials/header") -%>
 
-<div class="container-fluid">
-    <%  posts.forEach(function(post){%>
-        <h2><%= post.title %></h2>
-        <p class="text-truncate"><%= post.content.substring(0, 100) + "... " %>
-            <a href="/posts/<%=post._id%>">Read More</a>
-        </p>
-    <%});%>
-</div>
+<%  posts.forEach(function(post){ %>
+
+<h2><%=post.title%></h2>
+<p>
+<%=post.content.substring(0, 100) + " ..."%>
+<a href="/posts/<%=post._id%>">Read More</a>
+</p>
+
+
+<% }) %>
 
 <%- include("Partials/footer") -%>
